@@ -1,1 +1,34 @@
+# Node.js
 node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Logs
+*.log
+
+# Dependency directories
+bower_components/
+
+# Testing
+coverage/
+
+# Production
+/dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# IDE or editor folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Mac system files
+*.swp
