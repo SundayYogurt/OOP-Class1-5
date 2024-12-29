@@ -1,4 +1,3 @@
-import { privateDecrypt } from "crypto"
 
 class Customer {
     private id:number
