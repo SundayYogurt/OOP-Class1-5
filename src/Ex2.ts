@@ -1,88 +1,91 @@
-
 class Customer {
-    private id:number
-    private name:string
-    private discount:number
+  private id: number;
+  private name: string;
+  private discount: number;
 
-    constructor(id:number,name:string,discount:number){
-        this.id = id
-        this.name = name
-        this.discount = discount
-    }
+  constructor(id: number, name: string, discount: number) {
+    this.id = id;
+    this.name = name;
+    this.discount = discount;
+  }
 
-    public getId():number{
-        return this.id
-    }
+  public getId(): number {
+    return this.id;
+  }
 
-    public getName():string{
-        return this.name
-    }
+  public getName(): string {
+    return this.name;
+  }
 
-    public getDiscount():number{
-        return this.discount
-    }
+  public getDiscount(): number {
+    return this.discount;
+  }
 
-    public setDiscount(discount:number):void{
-        this.discount = discount
-    }
+  public setDiscount(discount: number): void {
+    this.discount = discount;
+  }
 
-    public toString():string{
-        return `name = ${this.name} ID = ${this.id} discount = ${this.discount * 100 }%`
-    }
+  public toString(): string {
+    return `name = ${this.name} ID = ${this.id} discount = ${
+      this.discount * 100
+    }%`;
+  }
 }
-
 
 class Invoice {
-    private id:number
-    private customer:Customer
-    private amount:number
+  private id: number;
+  private customer: Customer;
+  private amount: number;
 
-    constructor(id:number,customer:Customer,amount:number){
-        this.id = id
-        this.customer = customer
-        this.amount = amount
-    }
-    
-    public getId():number{
-        return this.id
-    }
+  constructor(id: number, customer: Customer, amount: number) {
+    this.id = id;
+    this.customer = customer;
+    this.amount = amount;
+  }
 
-    public getCustomer():Customer{
-        return this.customer
-    }
+  public getId(): number {
+    return this.id;
+  }
 
-    public setcustomer(customer:Customer):void{
-        this.customer = customer
-        
-    }
+  public getCustomer(): Customer {
+    return this.customer;
+  }
 
-    public getAmount():number{
-        return this.amount
-    }
+  public setcustomer(customer: Customer): void {
+    this.customer = customer;
+  }
 
-    public setAmount(amount:number):void{
-        this.amount = amount
-    }
+  public getAmount(): number {
+    return this.amount;
+  }
 
-    public getCustomerId():number{
-        return this.customer.getId()
-    }
+  public setAmount(amount: number): void {
+    this.amount = amount;
+  }
 
-    public getCustomerName():string{
-        return this.customer.getName()
-    }
+  public getCustomerId(): number {
+    return this.customer.getId();
+  }
 
-    public getCustomerDiscount():number{
-        return this.customer.getDiscount()
-    }
+  public getCustomerName(): string {
+    return this.customer.getName();
+  }
 
-    public getDiscountAfterDiscount():number{
-        return this.amount *(1- this.customer.getDiscount())
-    }
+  public getCustomerDiscount(): number {
+    return this.customer.getDiscount();
+  }
 
-    public toString():string{
-        return `Invoice ID = ${this.id} customer = ${this.customer.getId()} discount = ${this.customer.getDiscount() * 100 }% Amount${this.amount}`
-    }
+  public getDiscountAfterDiscount(): number {
+    return this.amount * (1 - this.customer.getDiscount());
+  }
+
+  public toString(): string {
+    return `Invoice ID = ${
+      this.id
+    }, customer = ${this.customer.getName()}, ID = ${this.customer.getId()}, discount = ${
+      this.customer.getDiscount() * 100
+    }% Amount${this.amount}`;
+  }
 }
 
-export = {Invoice, Customer}
+export = { Invoice, Customer };

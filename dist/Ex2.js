@@ -55,7 +55,7 @@ class Invoice {
         return this.amount * (1 - this.customer.getDiscount());
     }
     toString() {
-        return `Invoice ID = ${this.id} customer = ${this.customer.getId()} discount = ${this.customer.getDiscount() * 100}% Amount${this.amount}`;
+        return `Invoice ID = ${this.id}, customer = ${this.customer.getName()}, ID = ${this.customer.getId()}, discount = ${this.customer.getDiscount() * 100}% Amount${this.amount}`;
     }
 }
 module.exports = { Invoice, Customer };

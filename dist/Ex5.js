@@ -23,7 +23,7 @@ class Customers {
         this.memberType = memberType;
     }
     toString() {
-        return this.name + "(" + (this.member ? this.memberType : "not member") + ")";
+        return (this.name + "(" + (this.member ? this.memberType : "not member") + ")");
     }
 }
 exports.Customers = Customers;
@@ -54,7 +54,20 @@ class Visit extends Customers {
         return this.serviceExpense + this.productExpense;
     }
     toString() {
-        return "Name: " + this.getName() + "\n" + "Date: " + this.date + "\n" + "Service Expense: " + this.serviceExpense + "\n" + "Product Expense: " + this.productExpense + "\n" + "Total Expense: " + this.getTotalExpense();
+        return ("Name: " +
+            this.getName() +
+            "\n" +
+            "Date: " +
+            this.date +
+            "\n" +
+            "Service Expense: " +
+            this.serviceExpense +
+            "\n" +
+            "Product Expense: " +
+            this.productExpense +
+            "\n" +
+            "Total Expense: " +
+            this.getTotalExpense());
     }
 }
 exports.Visit = Visit;
