@@ -54,6 +54,10 @@ class Circle extends Shape {
     return Math.PI * this.radius * this.radius;
   }
 
+  public getPerimeter(): number {
+    return 2 * Math.PI * this.radius;
+  }
+
   public toString(): string {
     return `Circle[${super.toString()}, radius=${this.radius}]`;
   }
@@ -103,6 +107,10 @@ class Rectangle extends Shape {
 
   public getArea(): number {
     return this.width * this.length;
+  }
+
+  public getPerimeter(): number {
+    return 2 * (this.width + this.length);
   }
 
   public toString(): string {

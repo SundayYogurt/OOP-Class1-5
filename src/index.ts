@@ -64,10 +64,12 @@ console.log("################# EX4 ################");
 const circle1 = new Circle(2.0);
 const rectangle1 = new Rectangle(2.0, 3.0);
 const square1 = new Rectangle(2.0, 2.0, "yellow", true);
+const shape1 = new Shape("green", true);
 
 console.log(circle1.toString());
 console.log(rectangle1.toString());
 console.log(square1.toString());
+console.log(shape1.toString());
 
 console.log("################# EX4 ################");
 

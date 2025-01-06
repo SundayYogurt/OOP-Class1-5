@@ -44,6 +44,9 @@ class Circle extends Shape {
     getArea() {
         return Math.PI * this.radius * this.radius;
     }
+    getPerimeter() {
+        return 2 * Math.PI * this.radius;
+    }
     toString() {
         return `Circle[${super.toString()}, radius=${this.radius}]`;
     }
@@ -77,6 +80,9 @@ class Rectangle extends Shape {
     }
     getArea() {
         return this.width * this.length;
+    }
+    getPerimeter() {
+        return 2 * (this.width + this.length);
     }
     toString() {
         return `Rectangle[${super.toString()}, width=${this.width}, length=${this.length}]`;
